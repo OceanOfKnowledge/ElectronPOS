@@ -1,0 +1,14 @@
+{
+  "name": "newelectron",
+  "version": "1.0.0",
+  "description": "a test electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-pre-gyp": "^0.13.0"
+  }
+}

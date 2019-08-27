@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Store Manager</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body>
+    <header class="fluid-container" id="headRegion">
+      <h1>XYZ PHARMA</h1>
+      <p id="slogan">Some slogan</p>
+    </header>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-pos-tab" data-toggle="pill" href="#pills-pos" role="tab" aria-controls="pills-pos" aria-selected="true">POS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-inv-tab" data-toggle="pill" href="#pills-inv" role="tab" aria-controls="pills-inv" aria-selected="false">Inventory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-sales-tab" data-toggle="pill" href="#pills-sales" role="tab" aria-controls="pills-sales" aria-selected="false">Sales</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <!-- POS page -->
+      <div class="tab-pane fade show active" id="pills-pos" role="tabpanel" aria-labelledby="pills-pos-tab">
+        <div class="alert alert-danger">
+          Testing!
+        </div>
+        <h5>Filter by:</h5>
+        <div class="row pl-5">
+          <div class="form-group" style="margin: 5px">
+            <label for="name">Product Name</label>
+            <input type="text" name="name" class="form-control" id="name">
+          </div>
+          <div class="form-group" style="margin: 5px">
+            <label for="category">Category</label>
+            <input type="text" name="category" class="form-control" id="category">
+          </div>
+        </div>
+
+        <!-- Products Table -->
+        <div class="row pl-5">
+          <table class="table table-striped col-7">
+              <tr>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Shelf Address</th>
+                <th>Unit Price (GHC)</th>
+                <th>Add to Cart</th>
+              </tr>
+              <tr id="pdt1">
+                <td class='pdtID'>1</td>
+                <td class='pdtName'>Product 1</td>
+                <td class='pdtCategory'>Category 1</td>
+                <td class='shelfAddress'>S1-C1</td>
+                <td class='pdtPrice'>5.00</td>
+                <td><button type="button" id="btn1" class="add btn btn-default"><span class='plus'></span> Add</button></td>
+              </tr>
+              <tr id="pdt2">
+                <td class='pdtID'>2</td>
+                <td class='pdtName'>Abbaahsg</td>
+                <td class='pdtCategory'>Gradjkskjk</td>
+                <td class='shelfAddress'>S1-C1</td>
+                <td class='pdtPrice'>4.00</td>
+                <td><button type="button" id="btn2" class="add btn btn-default"><span class='plus'></span> Add</button></td>
+              </tr>
+              <tr id="pdt3">
+                <td class='pdtID'>3</td>
+                <td class='pdtName'>Zeediussss</td>
+                <td class='pdtCategory'>Huuuudffttio</td>
+                <td class='shelfAddress'>S1-C1</td>
+                <td class='pdtPrice'>15.00</td>
+                <td><button type="button" id="btn3" class="add btn btn-default"><span class='plus'></span> Add</button></td>
+              </tr>
+              <tr id="pdt4">
+                <td class='pdtID'>4</td>
+                <td class='pdtName'>Jooloopp</td>
+                <td class='pdtCategory'>Sssssttgggggggg</td>
+                <td class='shelfAddress'>S1-C1</td>
+                <td class='pdtPrice'>25.00</td>
+                <td><button type="button" id="btn4" class="add btn btn-default"><span class='plus'></span> Add</button></td>
+              </tr>
+              <tr id="pdt5">
+                <td class='pdtID'>5</td>
+                <td class='pdtName'>Aaabbaac</td>
+                <td class='pdtCategory'>Grad</td>
+                <td class='shelfAddress'>S1-C1</td>
+                <td class='pdtPrice'>3.00</td>
+                <td><button type="button" id="btn5" class="add btn btn-default"><span class='plus'></span> Add</button></td>
+              </tr>
+          </table>
+          <div class="col-5" id="shoppingCart">
+            <h3 class="cart-heading"><span class="shopping-cart"></span> Cart</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Pdt</th>
+                  <th>Qty</th>
+                  <th>Unit Price</th>
+                  <th>Amount</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="cartTable">
+
+              </tbody>
+              <tfoot id="totals">
+                <tr>
+                    <th colspan="4">Grand Total</th>
+                    <th id="totalAmt">0.00</th>
+                </tr>
+              </tfoot>
+            </table>
+            <p><button type="button" class="btn btn-success" id="checkout"><span class="print"></span> Checkout</button></p>
+          </div>
+        </div>
+        <!-- END Products Table -->
+
+      </div>
+      <!-- END POS page -->
+
+      <!-- Inventory Page -->
+      <div class="tab-pane fade" id="pills-inv" role="tabpanel" aria-labelledby="pills-inv-tab">
+          <h1>Inventory</h1>
+      </div>
+      <!-- END Inventory Page -->
+
+      <!-- Sales Page -->
+      <div class="tab-pane fade" id="pills-sales" role="tabpanel" aria-labelledby="pills-sales-tab">
+          <h1>Sales</h1>
+      </div>
+      <!-- END Sales Page -->
+    </div>
+    <div id="printable">
+      <h1>Heading</h1>
+    </div>
+
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+    
+    <script>if (window.module) module = window.module;</script>
+  </body>
+</html>
